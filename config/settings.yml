@@ -1,0 +1,13 @@
+defaults: &defaults
+  tutorial_url: "http://www.railstutorial.org/help"
+  book_url: "http://www.railstutorial.org/book"
+  main_url: "http://www.railstutorial.org/"
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults

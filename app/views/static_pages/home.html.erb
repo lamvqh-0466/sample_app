@@ -1,0 +1,12 @@
+<% provide :title, "Home" %>
+
+<div class="container">
+  <div class="text-center mt-5">
+    <h1 class="display-4 fw-bold"><%= t "site_name" %></h1>
+    <p class="lead">
+      <%= t "welcome_home" %>
+      <%= link_to t("home_message"), Settings.defaults.main_url, class: "text-primary" %>
+    </p>
+    <%= link_to t("sign_up"), "#", class: "btn btn-primary btn-lg mt-3" %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+vn:
+  site_name: "Chào mừng đến với Ứng dụng Mẫu"
+  welcome_message: "Đây là trang chủ của ứng dụng mẫu Ruby on Rails Tutorial."
+  logo: "Ứng dụng Mẫu"
+  home_message: "Hướng dẫn Ruby on Rails"
+  welcom_home: "Đây là trang chủ của "
+  navbar:
+    home: "Trang Chủ"
+    help: "Trợ Giúp"
+    login: "Đăng Nhập"
+  sign_up: "Đăng ký ngay"
+  help_message: "Nhận trợ giúp về Hướng dẫn Ruby on Rails tại trang"
+  tutorial_link: "trang trợ giúp Hướng dẫn Rails"
+  rails_book: "Để nhận trợ giúp về ứng dụng mẫu này, xem"
+  link_book: "sách Hướng dẫn Ruby on Rails"
