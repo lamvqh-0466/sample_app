@@ -3,6 +3,16 @@ defaults: &defaults
   book_url: "http://www.railstutorial.org/book"
   main_url: "http://www.railstutorial.org/"
 
+user:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+    email_regex: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    case_sensitive: false
+  password:
+    min_length: 8
+    
 development:
   <<: *defaults
 
