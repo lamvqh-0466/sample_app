@@ -8,10 +8,12 @@ user:
     max_length: 50
   email:
     max_length: 255
-    email_regex: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    email_regex: \A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z
     case_sensitive: false
   password:
     min_length: 8
+  avatar_url: https://secure.gravatar.com/avatar
+  create_successfull: "User created successfull"
     
 development:
   <<: *defaults

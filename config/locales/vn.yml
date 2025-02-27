@@ -13,3 +13,7 @@ vn:
   tutorial_link: "trang trợ giúp Hướng dẫn Rails"
   rails_book: "Để nhận trợ giúp về ứng dụng mẫu này, xem"
   link_book: "sách Hướng dẫn Ruby on Rails"
+  create_user: "Tạo tài khoản của tôi"
+  confirmation: "Xác nhận"
+  user_not_found : "Không tìm thấy người dùng"
+  submit_fail: "Có vấn đề trong bài nộp của bạn."

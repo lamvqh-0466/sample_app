@@ -14,3 +14,7 @@ en:
   rails_book: "For help with this sample app, see the"
   link_book: "Ruby on Rails Tutorial book"
   title: "Ruby on Rails Sample Application"
+  create_user : "Create my account"
+  confirmation : "Confirmation"
+  user_not_found : "User not found"
+  submit_fail: "There were problems with your submission"
