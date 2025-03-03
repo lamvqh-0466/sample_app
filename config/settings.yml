@@ -14,7 +14,7 @@ user:
     min_length: 8
   avatar_url: https://secure.gravatar.com/avatar
   create_successfull: "User created successfull"
-    
+  
 development:
   <<: *defaults
 
