@@ -25,3 +25,4 @@ vn:
   logout_successfull : "User logout successfull"
   login_successfull : "Đăng nhập thành công"
   logout_successfull : "User logout successfull"
+  remember_me : "Ghi nhớ tôi trên máy tính này"
