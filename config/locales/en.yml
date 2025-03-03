@@ -26,3 +26,4 @@ en:
   login : "Log in"
   logout_successfull : "User logout successfull"
   login_successfull : "User login successfull"
+  remember_me : "Remember me on this computer"
