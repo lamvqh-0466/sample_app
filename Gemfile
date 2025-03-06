@@ -5,11 +5,13 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", require: false
 gem "bootstrap-sass", "~> 3.3", ">= 3.3.6"
 gem "config"
+gem "faker", "2.21.0"
 gem "figaro"
 gem "htmlbeautifier", require: false
 gem "importmap-rails"
 gem "jbuilder"
 gem "mysql2", "~> 0.5"
+gem "pagy"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.5"
 gem "rails-i18n"
