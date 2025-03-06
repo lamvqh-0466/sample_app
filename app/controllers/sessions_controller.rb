@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate(params.dig(:session, :password))
-      handle_login
+      forwarding_url = session[:forwarding_url]
+      handle_login(forwarding_url)
     else
       handle_failed_login
     end
@@ -23,11 +24,11 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params.dig(:session, :email)&.downcase)
   end
 
-  def handle_login
+  def handle_login forwarding_url
     log_in @user
     handle_remember_me
     flash[:success] = t "login_successfull"
-    redirect_to user_path(id: @user.id), status: :see_other
+    redirect_to forwarding_url || user_path(id: @user.id), status: :see_other
   end
 
   def handle_failed_login
@@ -38,6 +39,7 @@ class SessionsController < ApplicationController
   def handle_remember_me
     if params.dig(:session, :remember_me) == "1"
       remember(@user)
+      redirect_back_or user_path(id: user.id)
     else
       forget(@user)
     end
