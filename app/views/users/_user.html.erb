@@ -1,0 +1,10 @@
+<% @users.each do |user| %>
+  <li>
+    <%= gravatar_for user, size: t("user.gravatar_size_user").to_i %>
+    <%= link_to user.name, user %>
+
+    <% if can_destroy_user?(user) %>
+      <%= link_to t("delete"), user, method: :delete, data: { confirm: t("delete_confirmation") } %>
+    <% end %>
+  </li>
+<% end %>

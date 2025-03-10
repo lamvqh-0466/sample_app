@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   ATTRIBUTES = [:name, :email, :password, :password_confirmation].freeze
   before_save :downcase_email
 
@@ -11,8 +10,9 @@ class User < ApplicationRecord
                     format: {with: Regexp.new(Settings.user.email.email_regex)},
                     uniqueness: {case_sensitive: false}
 
-  validates :password, presence: true,
+  validates :password, presence: true,allow_nil: true,
                        length: {minimum: Settings.user.password.min_length}
+
   has_secure_password
   attr_accessor :remember_token
 
@@ -32,7 +32,9 @@ class User < ApplicationRecord
   end
 
   def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+    return false if remember_digest.nil?
+
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
   def remember
