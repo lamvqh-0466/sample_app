@@ -14,7 +14,10 @@ user:
     min_length: 8
   avatar_url: https://secure.gravatar.com/avatar
   create_successfull: "User created successfull"
-  
+  gravatar_email: "http://gravatar.com/emails"
+  pagy_items: 10
+  gravatar_size : 80
+  gravatar_size_user: 50
 development:
   <<: *defaults
 
