@@ -41,6 +41,22 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+
+  config.action_mailer.default_url_options = { 
+    host: Settings.default_url_options.host, 
+    protocol: Settings.default_url_options.protocol 
+  }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: Settings.smtp_settings.user_name,
+    password: Settings.smtp_settings.password,
+    address: Settings.smtp_settings.address,
+    host: Settings.smtp_settings.host,
+    port: Settings.smtp_settings.port,
+    authentication: Settings.smtp_settings.authentication
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

@@ -22,9 +22,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(users_params)
     if @user.save
-      log_in @user
-      flash[:success] = Settings.user.create_successfull
-      redirect_to @user
+      @user.send_activation_email
+      flash[:warning] = t "account_not_activated"
+      redirect_to static_pages_home_path
     else
       flash.now[:danger] = t "submit_fail"
       render :new, status: :unprocessable_entity

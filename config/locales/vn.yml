@@ -37,4 +37,12 @@ vn:
   delete_fail : "Xóa không thành công"
   change : "change"
   delete_confirmation: "Bạn có muốn xóa không"
+  account_activated: "Tài khoản của bạn đã được kích hoạt thành công."
+  account_not_activated: "Tài khoản của bạn vẫn chưa được kích hoạt. Vui lòng kiểm tra email để kích hoạt tài khoản."
+  account_activation: "Kích hoạt tài khoản của bạn"
+  password_reset: "Đặt lại mật khẩu"
+  hi: "Xin chào"
+  welcome: "Chào mừng đến với"
+  click_the_link_below: "Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn"
+  active: "Đang hoạt động"
 
