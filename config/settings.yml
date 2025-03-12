@@ -2,7 +2,7 @@ defaults: &defaults
   tutorial_url: "http://www.railstutorial.org/help"
   book_url: "http://www.railstutorial.org/book"
   main_url: "http://www.railstutorial.org/"
-
+  time_expired: 2
 user:
   name:
     max_length: 50
