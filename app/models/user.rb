@@ -2,6 +2,7 @@ class User < ApplicationRecord
   ATTRIBUTES = [:name, :email, :password, :password_confirmation].freeze
   before_save :downcase_email
   before_create :create_activation_digest
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   validates :name, presence: true,
                    length: {maximum: Settings.user.name.max_length}
@@ -15,7 +16,20 @@ class User < ApplicationRecord
                        length: {minimum: Settings.user.password.min_length}
 
   has_secure_password
-  attr_accessor :remember_token, :activation_token
+
+  def password_reset_expired?
+    reset_sent_at < Settings.defaults.time_expired.hours.ago
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns(reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now)
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
 
   class << self
     def digest string
