@@ -3,6 +3,12 @@ defaults: &defaults
   book_url: "http://www.railstutorial.org/book"
   main_url: "http://www.railstutorial.org/"
   time_expired: 2
+  digit_140: 140
+  digit_50: 50 
+  image_types: ["image/jpeg", "image/png", "image/gif"]
+  max_image_size: 5
+  micropost_image_height: 400
+  micropost_image_width: 400
 user:
   name:
     max_length: 50

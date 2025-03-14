@@ -1,0 +1,14 @@
+<li id="micropost-<%= micropost.id %>">
+  <%= link_to gravatar_for(micropost.user, size: Settings.defaults.digit_50), micropost.user %>
+  <span class="user">
+    <%= link_to micropost.user.name, micropost.user %>
+  </span>
+  <span class="content"><%= micropost.content %></span>
+  <%= image_tag micropost.image if micropost.image.attached? %>
+  <span class="timestamp">
+    <%= t "posted" %> <%= time_ago_in_words micropost.created_at %> <%= t "ago" %>.
+      <% if current_user? micropost.user %>
+      <%= link_to t("delete"), micropost_path(micropost), data: {turbo_method: :delete, turbo_confirm: t("you_sure")} %>
+    <% end %>
+  </span>
+</li>
