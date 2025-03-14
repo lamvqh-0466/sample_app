@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     get "static_pages/home"
     get "static_pages/help"
 
-    get "/signup", to: "users#new"
+    get "/signup", to: "users#new" , as: "sign_up"  
     post "/signup", to: "users#create"
     resources :users
 
@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
     resources :account_activations, only: :edit  
     resources :password_resets, only: %i(new create edit update)
+    resources :microposts, only: %i(create destroy)
   end
 end
