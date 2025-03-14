@@ -9,6 +9,8 @@ defaults: &defaults
   max_image_size: 5
   micropost_image_height: 400
   micropost_image_width: 400
+  relationship_name: "Relationship"
+  user_class: "User"
 user:
   name:
     max_length: 50
@@ -23,6 +25,7 @@ user:
   gravatar_email: "http://gravatar.com/emails"
   pagy_items: 10
   gravatar_size : 80
+  gravatar_size_small : 30
   gravatar_size_user: 50
 development:
   <<: *defaults

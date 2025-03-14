@@ -65,4 +65,9 @@ vn:
   image_size: "kích thước phải nhỏ hơn 5MB"
   image_format: "phải ở định dạng jpg, jpeg, gif hoặc png"
   you_sure: "Bạn có chắc không?"
-
+  micropost_feed: "Bảng tin"
+  following: "Đang theo dõi"
+  followers: "Người theo dõi"
+  view_profile: "xem hồ sơ của tôi"
+  follow: "Theo dõi"
+  unfollow: "Bỏ theo dõi"
